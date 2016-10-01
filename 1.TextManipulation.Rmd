@@ -9,9 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+# 1-1. replace string component with regular expression
 ```{r}
- 
+money <- "$money"
+sub(pattern="\\$", replacement="", x=money)
 ```
 
 ```{r , echo=FALSE}
