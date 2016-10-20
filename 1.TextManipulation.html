@@ -122,11 +122,465 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="r"><code>states &lt;- rownames(USArrests)
+states</code></pre>
+<pre><code>##  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;      
+##  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;      
+##  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;         
+## [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;        
+## [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;      
+## [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;   
+## [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;        
+## [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;      
+## [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;      
+## [37] &quot;Oregon&quot;         &quot;Pennsylvania&quot;   &quot;Rhode Island&quot;   &quot;South Carolina&quot;
+## [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;          
+## [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot; 
+## [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;</code></pre>
+<div id="get-the-first-4-characters-in-states" class="section level1">
+<h1>1-1. Get the first 4 characters in states</h1>
+<pre><code>##  [1] &quot;Alab&quot; &quot;Alas&quot; &quot;Ariz&quot; &quot;Arka&quot; &quot;Cali&quot; &quot;Colo&quot; &quot;Conn&quot; &quot;Dela&quot; &quot;Flor&quot; &quot;Geor&quot;
+## [11] &quot;Hawa&quot; &quot;Idah&quot; &quot;Illi&quot; &quot;Indi&quot; &quot;Iowa&quot; &quot;Kans&quot; &quot;Kent&quot; &quot;Loui&quot; &quot;Main&quot; &quot;Mary&quot;
+## [21] &quot;Mass&quot; &quot;Mich&quot; &quot;Minn&quot; &quot;Miss&quot; &quot;Miss&quot; &quot;Mont&quot; &quot;Nebr&quot; &quot;Neva&quot; &quot;New &quot; &quot;New &quot;
+## [31] &quot;New &quot; &quot;New &quot; &quot;Nort&quot; &quot;Nort&quot; &quot;Ohio&quot; &quot;Okla&quot; &quot;Oreg&quot; &quot;Penn&quot; &quot;Rhod&quot; &quot;Sout&quot;
+## [41] &quot;Sout&quot; &quot;Tenn&quot; &quot;Texa&quot; &quot;Utah&quot; &quot;Verm&quot; &quot;Virg&quot; &quot;Wash&quot; &quot;West&quot; &quot;Wisc&quot; &quot;Wyom&quot;</code></pre>
+</div>
+<div id="get-the-last-character-in-states" class="section level1">
+<h1>1-2. Get the last character in states</h1>
+<pre><code>##  [1] &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;s&quot; &quot;a&quot; &quot;o&quot; &quot;t&quot; &quot;e&quot; &quot;a&quot; &quot;a&quot; &quot;i&quot; &quot;o&quot; &quot;s&quot; &quot;a&quot; &quot;a&quot; &quot;s&quot; &quot;y&quot;
+## [18] &quot;a&quot; &quot;e&quot; &quot;d&quot; &quot;s&quot; &quot;n&quot; &quot;a&quot; &quot;i&quot; &quot;i&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;e&quot; &quot;y&quot; &quot;o&quot; &quot;k&quot; &quot;a&quot; &quot;a&quot;
+## [35] &quot;o&quot; &quot;a&quot; &quot;n&quot; &quot;a&quot; &quot;d&quot; &quot;a&quot; &quot;a&quot; &quot;e&quot; &quot;s&quot; &quot;h&quot; &quot;t&quot; &quot;a&quot; &quot;n&quot; &quot;a&quot; &quot;n&quot; &quot;g&quot;</code></pre>
+</div>
+<div id="get-the-string-length-of-states" class="section level1">
+<h1>1-3. Get the string length of states</h1>
+<pre><code>##  [1]  7  6  7  8 10  8 11  8  7  7  6  5  8  7  4  6  8  9  5  8 13  8  9
+## [24] 11  8  7  8  6 13 10 10  8 14 12  4  8  6 12 12 14 12  9  5  4  7  8
+## [47] 10 13  9  7</code></pre>
+</div>
+<div id="get-the-state-name-with-longest-string-length" class="section level1">
+<h1>1-4. Get the state name with longest string length</h1>
+<pre><code>## [1] &quot;North Carolina&quot; &quot;South Carolina&quot;</code></pre>
+</div>
+<div id="get-the-index-of-state-name-with-k" class="section level1">
+<h1>1-5. Get the index of state name with ‘k’</h1>
+<pre><code>## [1]  2  4 17 27 32 34 36 41</code></pre>
+</div>
+<div id="get-the-state-name-with-k" class="section level1">
+<h1>1-5-1. Get the state name with ‘k’</h1>
+<pre><code>## [1] &quot;Alaska&quot;       &quot;Arkansas&quot;     &quot;Kentucky&quot;     &quot;Nebraska&quot;    
+## [5] &quot;New York&quot;     &quot;North Dakota&quot; &quot;Oklahoma&quot;     &quot;South Dakota&quot;</code></pre>
+</div>
+<div id="check-if-each-item-with-k" class="section level1">
+<h1>1-5-2. Check if each item with ‘k’</h1>
+<pre><code>##  [1] FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+## [12] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE
+## [23] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
+## [34]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE
+## [45] FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+</div>
+<div id="get-the-state-name-with-w-or-w" class="section level1">
+<h1>1-6. Get the state name with ‘w’ or “W”</h1>
+<pre><code>##  [1] &quot;Delaware&quot;      &quot;Hawaii&quot;        &quot;Iowa&quot;          &quot;New Hampshire&quot;
+##  [5] &quot;New Jersey&quot;    &quot;New Mexico&quot;    &quot;New York&quot;      &quot;Washington&quot;   
+##  [9] &quot;West Virginia&quot; &quot;Wisconsin&quot;     &quot;Wyoming&quot;</code></pre>
+</div>
+<div id="transform-to-upper-case" class="section level1">
+<h1>1-7. Transform to Upper Case</h1>
+<pre><code>##  [1] &quot;ALABAMA&quot;        &quot;ALASKA&quot;         &quot;ARIZONA&quot;        &quot;ARKANSAS&quot;      
+##  [5] &quot;CALIFORNIA&quot;     &quot;COLORADO&quot;       &quot;CONNECTICUT&quot;    &quot;DELAWARE&quot;      
+##  [9] &quot;FLORIDA&quot;        &quot;GEORGIA&quot;        &quot;HAWAII&quot;         &quot;IDAHO&quot;         
+## [13] &quot;ILLINOIS&quot;       &quot;INDIANA&quot;        &quot;IOWA&quot;           &quot;KANSAS&quot;        
+## [17] &quot;KENTUCKY&quot;       &quot;LOUISIANA&quot;      &quot;MAINE&quot;          &quot;MARYLAND&quot;      
+## [21] &quot;MASSACHUSETTS&quot;  &quot;MICHIGAN&quot;       &quot;MINNESOTA&quot;      &quot;MISSISSIPPI&quot;   
+## [25] &quot;MISSOURI&quot;       &quot;MONTANA&quot;        &quot;NEBRASKA&quot;       &quot;NEVADA&quot;        
+## [29] &quot;NEW HAMPSHIRE&quot;  &quot;NEW JERSEY&quot;     &quot;NEW MEXICO&quot;     &quot;NEW YORK&quot;      
+## [33] &quot;NORTH CAROLINA&quot; &quot;NORTH DAKOTA&quot;   &quot;OHIO&quot;           &quot;OKLAHOMA&quot;      
+## [37] &quot;OREGON&quot;         &quot;PENNSYLVANIA&quot;   &quot;RHODE ISLAND&quot;   &quot;SOUTH CAROLINA&quot;
+## [41] &quot;SOUTH DAKOTA&quot;   &quot;TENNESSEE&quot;      &quot;TEXAS&quot;          &quot;UTAH&quot;          
+## [45] &quot;VERMONT&quot;        &quot;VIRGINIA&quot;       &quot;WASHINGTON&quot;     &quot;WEST VIRGINIA&quot; 
+## [49] &quot;WISCONSIN&quot;      &quot;WYOMING&quot;</code></pre>
+</div>
+<div id="transform-to-lower-case" class="section level1">
+<h1>1-8. Transform to Lower Case</h1>
+<pre><code>##  [1] &quot;alabama&quot;        &quot;alaska&quot;         &quot;arizona&quot;        &quot;arkansas&quot;      
+##  [5] &quot;california&quot;     &quot;colorado&quot;       &quot;connecticut&quot;    &quot;delaware&quot;      
+##  [9] &quot;florida&quot;        &quot;georgia&quot;        &quot;hawaii&quot;         &quot;idaho&quot;         
+## [13] &quot;illinois&quot;       &quot;indiana&quot;        &quot;iowa&quot;           &quot;kansas&quot;        
+## [17] &quot;kentucky&quot;       &quot;louisiana&quot;      &quot;maine&quot;          &quot;maryland&quot;      
+## [21] &quot;massachusetts&quot;  &quot;michigan&quot;       &quot;minnesota&quot;      &quot;mississippi&quot;   
+## [25] &quot;missouri&quot;       &quot;montana&quot;        &quot;nebraska&quot;       &quot;nevada&quot;        
+## [29] &quot;new hampshire&quot;  &quot;new jersey&quot;     &quot;new mexico&quot;     &quot;new york&quot;      
+## [33] &quot;north carolina&quot; &quot;north dakota&quot;   &quot;ohio&quot;           &quot;oklahoma&quot;      
+## [37] &quot;oregon&quot;         &quot;pennsylvania&quot;   &quot;rhode island&quot;   &quot;south carolina&quot;
+## [41] &quot;south dakota&quot;   &quot;tennessee&quot;      &quot;texas&quot;          &quot;utah&quot;          
+## [45] &quot;vermont&quot;        &quot;virginia&quot;       &quot;washington&quot;     &quot;west virginia&quot; 
+## [49] &quot;wisconsin&quot;      &quot;wyoming&quot;</code></pre>
+</div>
+<div id="get-the-location-of-a-in-states" class="section level1">
+<h1>1-9 Get the location of ‘a’ in states</h1>
+<pre><code>## [[1]]
+## [1] 1 3 5 7
+## attr(,&quot;match.length&quot;)
+## [1] 1 1 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[2]]
+## [1] 1 3 6
+## attr(,&quot;match.length&quot;)
+## [1] 1 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[3]]
+## [1] 1 7
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[4]]
+## [1] 1 4 7
+## attr(,&quot;match.length&quot;)
+## [1] 1 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[5]]
+## [1]  2 10
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[6]]
+## [1] 6
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[7]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[8]]
+## [1] 4 6
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[9]]
+## [1] 7
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[10]]
+## [1] 7
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[11]]
+## [1] 2 4
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[12]]
+## [1] 3
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[13]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[14]]
+## [1] 5 7
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[15]]
+## [1] 4
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[16]]
+## [1] 2 5
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[17]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[18]]
+## [1] 7 9
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[19]]
+## [1] 2
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[20]]
+## [1] 2 6
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[21]]
+## [1] 2 5
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[22]]
+## [1] 7
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[23]]
+## [1] 9
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[24]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[25]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[26]]
+## [1] 5 7
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[27]]
+## [1] 5 8
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[28]]
+## [1] 4 6
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[29]]
+## [1] 6
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[30]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[31]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[32]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[33]]
+## [1]  8 14
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[34]]
+## [1]  8 12
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[35]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[36]]
+## [1] 4 8
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[37]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[38]]
+## [1]  9 12
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[39]]
+## [1] 10
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[40]]
+## [1]  8 14
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[41]]
+## [1]  8 12
+## attr(,&quot;match.length&quot;)
+## [1] 1 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[42]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[43]]
+## [1] 4
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[44]]
+## [1] 3
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[45]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[46]]
+## [1] 8
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[47]]
+## [1] 2
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[48]]
+## [1] 13
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[49]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[50]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE</code></pre>
+</div>
+<div id="get-the-number-of-a-in-states" class="section level1">
+<h1>1-10 Get the number of ‘a’ in states</h1>
+<pre><code>##  [1] 4 3 2 3 2 1 0 2 1 1 2 1 0 2 1 2 0 2 1 2 2 1 1 0 0 2 2 2 1 0 0 0 2 2 0
+## [36] 2 0 2 1 2 2 0 1 1 0 1 1 1 0 0</code></pre>
+</div>
 <div id="replace-string-component-with-regular-expression" class="section level1">
 <h1>1-1. replace string component with regular expression</h1>
 <pre class="r"><code>money &lt;- &quot;$money&quot;
 sub(pattern=&quot;\\$&quot;, replacement=&quot;&quot;, x=money)</code></pre>
 <pre><code>## [1] &quot;money&quot;</code></pre>
+<pre><code>## character(0)</code></pre>
+<pre><code>## [[1]]
+##      [,1]</code></pre>
 </div>
 
 

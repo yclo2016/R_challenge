@@ -9,6 +9,78 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+states <- rownames(USArrests)
+states
+```
+# 1-1. Get the first 4 characters in states
+```{r, echo=FALSE}
+substr(x=states, start=1, stop=4)
+# or you can use
+# str_sub(states, start=1, end=4)
+```
+
+# 1-2. Get the last character in states
+```{r, echo=FALSE}
+library(stringr)
+str_sub(states, start=-1, end=-1)
+```
+
+# 1-3. Get the string length of states
+```{r, echo=FALSE}
+state_chars <- nchar(states)
+state_chars
+```
+
+# 1-4. Get the state name with longest string length
+```{r, echo=FALSE}
+states[which(state_chars==max(state_chars))]
+```
+
+# 1-5. Get the index of state name with 'k'
+```{r, echo=FALSE}
+grep(pattern="k", x=states)
+```
+
+# 1-5-1. Get the state name with 'k'
+```{r, echo=FALSE}
+grep(pattern="k", x=states, value=TRUE)
+```
+
+# 1-5-2. Check if each item  with 'k'
+```{r, echo=FALSE}
+grepl(pattern="k", x=states)
+# grepl with give logical output
+```
+
+
+# 1-6. Get the state name with 'w' or "W"
+```{r, echo=FALSE}
+grep(pattern="w", x=states, value=TRUE, ignore.case = TRUE)
+```
+
+# 1-7. Transform to Upper Case
+```{r, echo=FALSE}
+toupper(states)
+```
+
+# 1-8. Transform to Lower Case
+```{r, echo=FALSE}
+tolower(states)
+```
+
+# 1-9 Get the location of 'a' in states
+```{r, echo=FALSE}
+positions_a <- gregexpr(pattern="a", text=states, ignore.case = TRUE)
+positions_a
+```
+
+# 1-10 Get the number of 'a' in states
+```{r, echo=FALSE}
+num_a <- sapply(positions_a, function(x) ifelse(x[1]>0, length(x), 0))
+num_a
+```
+
 # 1-1. replace string component with regular expression
 ```{r}
 money <- "$money"
@@ -16,6 +88,12 @@ sub(pattern="\\$", replacement="", x=money)
 ```
 
 ```{r , echo=FALSE}
-
+raw <- readLines("http://register.vghtc.gov.tw/register/listDoctor.jsp?init=sub&section=NEPH#羅盈智醫師")
+t1 <- paste(raw, collapse = "")
+pattern <- 't.*gn'
+pattern <- "<td>.*</td>"
+a <- grep(pattern, raw, value=TRUE)
+sub(pattern, "\\1", a)
+str_match_all(t1, pattern)
 ```
 
